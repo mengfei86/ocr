@@ -1,0 +1,37 @@
+#@layout()
+#define main()
+<h1>信息查询</h1>
+<div class="table_box">
+	<table class="list">
+		<tbody>
+			<tr>
+				<th width="10%">id</th>
+				<th width="20%">是否室内</th>
+				<th width="10%">手机型号</th>
+				<th width="10%">视频造假</th>
+				<th width="10%">图片造假</th>
+				<th width="20%">创建日期</th>
+				<th width="20%">操作</th>
+			</tr>
+			#for(x : page.getList())
+			<tr>
+				<td style="text-align:left;">#(x.id)</td>
+				<td style="text-align:left;">#(x.isindoor)</td>
+				<td style="text-align:left;">#(x.moblietype)</td>
+<!-- 				<td style="text-align:left;">#(x.url)</td> -->
+				<td style="text-align:left;">#(x.video)</td>
+				<td style="text-align:left;">#(x.photo)</td>
+				<td style="text-align:left;">#(x.creattime)</td>
+				<td style="text-align:left;">
+<!-- 				<video width="320" height="240" src="http://182.92.64.67:10050#(x.url)" controls="controls"> -->
+<!-- </video> -->
+				<a href="#(ctx_path)/admin/show/#(x.id)">播放</a>
+			
+				</td>
+			</tr>
+			#end
+		</tbody>
+	</table>
+	#@paginate(page.pageNumber, page.totalPage, ctx_path+"/admin/select/")
+</div>
+#end

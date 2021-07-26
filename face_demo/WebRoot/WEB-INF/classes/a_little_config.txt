@@ -1,8 +1,0 @@
-jdbcUrl = 
-user = 
-password =
-devMode = 
-
-imgurl=e:\\data\\ocr\\
-facexml=e:\\lbpcascade_frontalface.xml
-octdata=d:\\Program Files (x86)\\Tesseract-OCR\\tessdata
